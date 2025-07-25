@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-sidebar: #0B0F1A;
+  --color-sideitem-active: rgba(12, 37, 229, 0.25);  
+}
+
+.root-bg {
+  background: linear-gradient(135deg, #0B0F1A, #263243);
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+.card-primary {
+  @apply rounded-xl bg-gradient-to-br from-[#364A69] to-[#1D2D59] px-5 py-5 shadow shadow-gray-900
+}
+
+.form-control {
+  @apply  bg-slate-900 w-full rounded py-1 transition-all text-lg ps-2 
+}
+
+.form-control:focus {
+  @apply outline-1 outline-white ps-3
+}
+
+.black-bg {
+  @apply bg-gradient-to-br from-[#263243] to-[#0B0F1A]
+}
+
+.table-primary {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-primary th,
+.table-primary td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: left;
+}
+
+.table-primary th {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.running {
+  @apply text-yellow-300
+}
+
+.available {
+  @apply text-green-400
+}
