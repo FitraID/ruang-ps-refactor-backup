@@ -59,6 +59,18 @@ body {
   @apply min-w-40 w-40
 }
 
+.table-primary.five-col-2 tr th:nth-child(1) {
+  @apply min-w-10 w-10
+}
+
+.table-primary.five-col-2 tr th:nth-child(4) {
+  @apply min-w-20 w-20
+}
+
+.table-primary.five-col-2 tr th:nth-child(5) {
+  @apply min-w-40 w-40
+}
+
 .table-primary th,
 .table-primary td {
     border: 1px solid rgba(255, 255, 255, 0.2);

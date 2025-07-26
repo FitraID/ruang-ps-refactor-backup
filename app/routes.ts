@@ -14,8 +14,13 @@ export default [
         ...prefix("item", [
             index('routes/dashboard/item.jsx'),
             route("add-new",'routes/dashboard/item/add-new.jsx'),
+            route("edit/:id",'routes/dashboard/item/edit.jsx'),
         ]),
-        route("user-management", 'routes/dashboard/user-management.jsx'),
+        ...prefix("user-management", [
+            index('routes/dashboard/user-management.jsx'),
+            route("add-new",'routes/dashboard/user/add-new.jsx'),
+            route("edit/:id",'routes/dashboard/user/edit.jsx'),
+        ]),
         route("setting", 'routes/dashboard/setting.jsx'),
     ])
     
