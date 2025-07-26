@@ -90,7 +90,7 @@ export default function Item() {
             </div>
           </div>
           <div className="mb-3 table-container">
-            <table className="table-primary five-col  ">
+            <table className="table-primary five-col">
               <thead>
                 <tr>
                   <th>No</th>

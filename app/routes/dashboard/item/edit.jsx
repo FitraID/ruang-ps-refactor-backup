@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-export default function NewItem() {
+export default function EditItem() {
   return (
     <>
       <NavLink to={"/item"}>

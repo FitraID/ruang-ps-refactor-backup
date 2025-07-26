@@ -50,7 +50,7 @@ export default function Header() {
           >
             <div className="black-bg py-2  px-5 w-64 shadow shadow-neutral-500">
               {navList.map((data, index) => (
-                <div className="cursor-pointer">
+                <div key={`header${index}`} className="cursor-pointer">
                   <div className="mb-3">
                     <div className="flex gap-3">
                       <img
