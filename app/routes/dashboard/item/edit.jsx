@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-export default function EditItem() {
+export default function EditItem({ params }) {
   return (
     <>
       <NavLink to={"/item"}>
@@ -9,7 +9,7 @@ export default function EditItem() {
       </NavLink>
       <div className="card-primary">
         <div className="mb-5">
-          <div className="text-xl/4">Tambah Item Baru</div>
+          <div className="text-xl/4">Edit Menu {params.id}</div>
           <small>masukan detail item menu baru disini</small>
         </div>
         <div className="grid lg:grid-cols-2 gap-3">

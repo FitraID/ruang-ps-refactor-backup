@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import useGlobalStore from "../../helper/store";
+import { NavLink } from "react-router";
 
 export default function Playstation() {
   const konsoles = useGlobalStore((state) => state.listKonsol);
@@ -25,9 +26,11 @@ export default function Playstation() {
                   className="form-control"
                 />
               </div>
-              <button className="bg-blue-800 hover:bg-blue-700 active:bg-blue-900 cursor-pointer px-5 py-3 rounded">
-                Tambah Konsol
-              </button>
+              <NavLink to={"/playstation/add-new"}>
+                <button className="bg-blue-800 hover:bg-blue-700 active:bg-blue-900 cursor-pointer px-5 py-3 rounded">
+                  Tambah Konsol
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>

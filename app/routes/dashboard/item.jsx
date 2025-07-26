@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import { deleteSwal } from "../../helper/swal";
 export default function Item() {
   const [sampleMenu, setSampleMenu] = useState([]);
   const [samplePackage, setSamplePackage] = useState([]);
@@ -64,10 +65,15 @@ export default function Item() {
                     <td>{data.stock}</td>
                     <td>
                       <div className="flex gap-3">
-                        <button className="bg-green-600 hover:bg-green-500 active:bg-green-700 px-5 py-1 rounded-lg cursor-pointer">
-                          Edit
-                        </button>
-                        <button className="bg-red-600 hover:bg-red-500 active:bg-red-700 px-5 py-1 rounded-lg cursor-pointer">
+                        <NavLink to={`edit/${data.id}`}>
+                          <button className="bg-green-600 hover:bg-green-500 active:bg-green-700 px-5 py-1 rounded-lg cursor-pointer">
+                            Edit
+                          </button>
+                        </NavLink>
+                        <button
+                          onClick={deleteSwal}
+                          className="bg-red-600 hover:bg-red-500 active:bg-red-700 px-5 py-1 rounded-lg cursor-pointer"
+                        >
                           Hapus
                         </button>
                       </div>
@@ -96,7 +102,7 @@ export default function Item() {
                   <th>No</th>
                   <th>Nama</th>
                   <th>Harga</th>
-                  <th>Stok</th>
+                  <th>Menit</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -106,13 +112,18 @@ export default function Item() {
                     <td>{data.id}</td>
                     <td>{data.name}</td>
                     <td>{data.price}</td>
-                    <td>{data.stock}</td>
+                    <td>{data.time}</td>
                     <td>
                       <div className="flex gap-3">
-                        <button className="bg-green-600 hover:bg-green-500 active:bg-green-700 px-5 py-1 rounded-lg cursor-pointer">
-                          Edit
-                        </button>
-                        <button className="bg-red-600 hover:bg-red-500 active:bg-red-700 px-5 py-1 rounded-lg cursor-pointer">
+                        <NavLink to={`edit/${data.id}`}>
+                          <button className="bg-green-600 hover:bg-green-500 active:bg-green-700 px-5 py-1 rounded-lg cursor-pointer">
+                            Edit
+                          </button>
+                        </NavLink>
+                        <button
+                          onClick={deleteSwal}
+                          className="bg-red-600 hover:bg-red-500 active:bg-red-700 px-5 py-1 rounded-lg cursor-pointer"
+                        >
                           Hapus
                         </button>
                       </div>

@@ -9,7 +9,11 @@ export default [
     //Dashboard
     layout("layout/sidebar-layout.jsx", [
         route("dashboard", "routes/dashboard/index.jsx"),
-        route("playstation", 'routes/dashboard/playstation.jsx'),
+        ...prefix("playstation", [
+            index('routes/dashboard/playstation.jsx'),
+            route("add-new",'routes/dashboard/konsol/add-new.jsx'),
+            route("edit/:id",'routes/dashboard/konsol/edit.jsx'),
+        ]),
         route("finance", 'routes/dashboard/finance.jsx'),
         ...prefix("item", [
             index('routes/dashboard/item.jsx'),

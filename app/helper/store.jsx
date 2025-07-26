@@ -3,6 +3,12 @@ import { create } from "zustand";
 const useGlobalStore = create((set) => ({
   isNav: true,
   isProfile: false,
+  userData: {
+    id: "12",
+    name: "admin",
+    phone: "0813456789",
+    isAdmin: true,
+  },
   listKonsol: [
     {
       id: 1,
@@ -91,6 +97,8 @@ const useGlobalStore = create((set) => ({
   ],
   setKonsol: (param) => set(() => ({ listKonsol: param })),
   toggleNav: () => set((state) => ({ isNav: !state.isNav })),
+  login: (loginData) => set(() => ({ userData: loginData })),
+  logout: () => set(() => ({ userData: null })),
   toggleProfile: () => set((state) => ({ isProfile: !state.isProfile })),
   falseProfile: () => set((state) => ({ isProfile: false })),
 }));
