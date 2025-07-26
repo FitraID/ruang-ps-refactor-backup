@@ -25,12 +25,12 @@ export default function Header() {
   return (
     <>
       <div
-        className={`flex w-full py-5 items-center ${isVisible ? "justify-end" : "justify-between"}`}
+        className={`flex w-full py-5 pe-5 items-center ${isVisible ? "justify-end" : "justify-between"}`}
       >
         <div className={` ${isVisible ? "hidden" : ""}`}>
           <img
             onClick={() => toggleVisible()}
-            src="menu.png"
+            src="/menu.png"
             className="w-10 h-auto cursor-pointer "
             alt=""
           />
@@ -40,7 +40,7 @@ export default function Header() {
             <img
               onClick={() => toggleProfile()}
               onBlur={() => closeProfile()}
-              src="rp.png"
+              src="/rp.png"
               className="w-10"
               alt=""
             />
@@ -53,7 +53,11 @@ export default function Header() {
                 <div className="cursor-pointer">
                   <div className="mb-3">
                     <div className="flex gap-3">
-                      <img src={data.icon} className="w-6 h-auto" alt="" />
+                      <img
+                        src={`/${data.icon}`}
+                        className="w-6 h-auto"
+                        alt=""
+                      />
                       <div
                         className={`grow ${data.isLogout ? "text-red-500" : ""}`}
                       >

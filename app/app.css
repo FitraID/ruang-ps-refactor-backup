@@ -13,7 +13,7 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white dark:bg-gray-950 ;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
@@ -25,7 +25,7 @@ body {
 }
 
 .form-control {
-  @apply  bg-slate-900 w-full rounded py-1 transition-all text-lg ps-2 
+  @apply  bg-slate-900 w-full rounded py-1 transition-all text-lg px-2 
 }
 
 .form-control:focus {
@@ -37,8 +37,26 @@ body {
 }
 
 .table-primary {
+    min-width: 60em;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+}
+
+.table-primary.five-col tr th:nth-child(1) {
+  @apply min-w-10 w-10
+}
+
+.table-primary.five-col tr th:nth-child(3) {
+  @apply min-w-40 w-40
+}
+
+.table-primary.five-col tr th:nth-child(4) {
+  @apply min-w-20 w-20
+}
+
+.table-primary.five-col tr th:nth-child(5) {
+  @apply min-w-40 w-40
 }
 
 .table-primary th,
@@ -52,10 +70,40 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+h3.title {
+  @apply text-xl font-semibold 
+}
+
 .running {
   @apply text-yellow-300
 }
 
 .available {
   @apply text-green-400
+}
+
+.button-primary {
+  @apply bg-blue-800 hover:bg-blue-700 active:bg-blue-900 cursor-pointer px-5 py-2 rounded
+}
+
+.table-container {
+  @apply overflow-x-auto w-[75vw] 2xl:w-full 
+}
+
+.back-button {
+  @apply       bg-gradient-to-br from-slate-600 to-slate-800 
+      hover:from-slate-500 hover:to-slate-600
+      active:from-slate-500 active:to-slate-800 
+      transition-all px-5 py-2 rounded
+}
+
+div {
+}
+
+small {
+  @apply font-light text-xs text-neutral-300
+}
+
+.label {
+  @apply mb-1
 }

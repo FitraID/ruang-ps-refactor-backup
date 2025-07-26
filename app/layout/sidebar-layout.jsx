@@ -14,12 +14,12 @@ export default function SidebarLayout() {
         {/* Navbar, Header etc */}
         <Sidebar />
         <div
-          className={`transition-all pe-5 ${isVisible ? "lg:ps-80" : "ps-5 lg:ps-22"}`}
+          className={`transition-all  ${isVisible ? "lg:ps-80" : "ps-5 lg:ps-22"}`}
         >
           <Header />
-          <div onClick={() => closeProfile()} className="flex ">
+          <div onClick={() => closeProfile()} className="flex">
             {/* Content */}
-            <div className="grow py-5 px-5">
+            <div className="grow py-5 pe-5">
               <Outlet />
             </div>
           </div>

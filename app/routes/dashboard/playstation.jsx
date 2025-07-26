@@ -9,7 +9,7 @@ export default function Playstation() {
   return (
     <>
       <div className="mb-4">
-        <div className="text-2xl font-semibold">Manajemen Playstation</div>
+        <h3 className="title">Manajemen Playstation</h3>
       </div>
       <div className="mb-5">
         <div className="card-primary">
@@ -37,15 +37,15 @@ export default function Playstation() {
           <div className="mb-3">
             <div>Daftar Konsol</div>
           </div>
-          <div className="mb-3 overflow-x-auto w-[80vw] 2xl:w-full">
-            <table className="table-primary min-w-[60em] w-full">
+          <div className="mb-3 table-container">
+            <table className="table-primary five-col">
               <thead>
                 <tr>
-                  <th className="min-w-10 w-10">No</th>
-                  <th className="">Nama</th>
-                  <th className="min-w-40 w-40">Status</th>
-                  <th className="min-w-20 w-20">Timer</th>
-                  <th className="min-w-40 w-40">Aksi</th>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Status</th>
+                  <th>Timer</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>

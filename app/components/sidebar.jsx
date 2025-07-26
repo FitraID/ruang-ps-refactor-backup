@@ -59,7 +59,7 @@ export default function Sidebar() {
         <div className="px-3 py-5">
           <div className="mb-8">
             <div className="flex justify-between items-center">
-              <img src="ps.png" className="w-14" alt="" />
+              <img src="/ps.png" className="w-14" alt="" />
               <h3
                 className={`grow text-center font-semibold text-xl ${isVisible ? "" : "lg:hidden"}`}
               >
@@ -67,7 +67,7 @@ export default function Sidebar() {
               </h3>
               <img
                 onClick={() => toggleVisible()}
-                src="close.png"
+                src="/close.png"
                 className={`w-5 cursor-pointer ${isVisible ? "" : "lg:hidden"}`}
                 alt=""
               />
@@ -88,7 +88,7 @@ export default function Sidebar() {
                 >
                   <div className="flex gap-3 items-center">
                     <img
-                      src={data.icon}
+                      src={`/${data.icon}`}
                       className="min-w-5 w-5 h-full"
                       alt=""
                     />
